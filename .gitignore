@@ -1,0 +1,33 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.rpm
+*.deb
+*.apk
+*.bin
+bin/
+
+# Test binary, generated with go test -c
+*.test
+
+# Output of the go generate command
+*.out
+
+# Dependency directories (remove the 'vendor' directory to force go mod download)
+# vendor/
+
+# Go module cache (usually in ~/.cache/go-build)
+# This is mainly for local development and CI/CD environments.
+# Should not be checked into VCS for source code.
+.cache/
+go.sum # You might want to include go.sum, but some prefer to ignore it
+       # if it's strictly for local dev or CI build environment.
+       # For most projects, go.sum *should* be committed.
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.swp
+*~

@@ -21,3 +21,6 @@ build:
 
 runb:
 	./bin/elec-trade-data-tw
+
+output:
+	GOOS=linux GOARCH=amd64 go build -o ./bin/elec-trade-data-tw-linux-amd64 ./cmd/elec-trade-data-tw

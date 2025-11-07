@@ -49,9 +49,11 @@
 執行 `scripts/fill_elec_trade_data_tw.sh`，自動補齊 2021-07-01 到 2025-11-06 資料。
 
 ## crontab/自動化
-可將 binary 加入 crontab，每日自動執行：
+
+可將 binary 加入 crontab，每日自動執行，例如：
 ```
-0 2 * * * /path/to/elec-trade-data-tw
+# 每天 08:30 執行
+30 8 * * * /some/path/elec-trade-data-tw-linux-amd64
 ```
 
 ## 錯誤處理與重試

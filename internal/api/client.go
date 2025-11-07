@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"time"
 
 	"github.com/Nextdrive-AaronWu/elec-trade-data/internal/model"
 )
@@ -15,10 +14,6 @@ func FetchDailyData(startDate string) (*model.APIResponse, error) {
 	baseURL := os.Getenv("API_BASE_URL")
 	if baseURL == "" {
 		return nil, fmt.Errorf("API_BASE_URL not set")
-	}
-	if startDate == "" {
-		// 預設今日
-		startDate = time.Now().Format("2006-01-02")
 	}
 
 	url := fmt.Sprintf("%s?startDate=%s", baseURL, startDate)

@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"os"
+	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/joho/godotenv"
@@ -33,7 +34,9 @@ func main() {
 	} else if os.Getenv("START_DATE") != "" {
 		startDate = os.Getenv("START_DATE")
 	} else {
-		startDate = ""
+		startDate = (func() string {
+			return time.Now().AddDate(0, 0, 1).Format("2006-01-02")
+		})()
 	}
 
 	// 印出本次處理的日期
